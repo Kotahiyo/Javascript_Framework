@@ -16,11 +16,21 @@
     <v-btn class="mx-1" fab dark color="orange" @click="minus">
       <v-icon dark> mdi-minus </v-icon>
     </v-btn>
+
+    <!-- <counter-button /> で 閉じタグと同じ表現 -->
+    <counter-button />
   </div>
 </template>
 
 <script>
+// ①作成したコンポーネントの読み込み
+import CounterButton from '@/components/CounterButton.vue'
+
 export default {
+  // ②プロパティに指定
+  components: {
+    CounterButton,
+  },
   // data というメソッドを作成
   data() {
     // return でオブジェクトのプロパティが count: 0 のものを返している
