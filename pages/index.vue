@@ -1,12 +1,12 @@
 <template>
   <div>
     <!-- {{}} で囲むと javascript が書ける（マスタッシュ記法） -->
-    <div>{{ count }}</div>
+    <div class="number">{{ count }}</div>
     <!-- v-記法をディレクティブと呼ぶ
     @ で省略できる
     @click = v-on:click  -->
-    <button @click="plus">+</button>
-    <button @click="minus">-</button>
+    <button @click="plus" class="button">+</button>
+    <button @click="minus" class="button">-</button>
   </div>
 </template>
 
@@ -32,3 +32,17 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.number {
+  font-size: 64px;
+}
+
+.button {
+  font-size: 32px;
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+}
+</style>
