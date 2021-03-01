@@ -9,16 +9,18 @@
     <button @click="minus" class="button">-</button> -->
 
     <!-- Vuetify で簡単にボタン作成 -->
-    <v-btn class="mx-1" fab dark color="blue" @click="plus">
+    <!-- <v-btn class="mx-1" fab dark color="blue" @click="plus">
       <v-icon dark> mdi-plus </v-icon>
     </v-btn>
 
     <v-btn class="mx-1" fab dark color="orange" @click="minus">
       <v-icon dark> mdi-minus </v-icon>
-    </v-btn>
+    </v-btn> -->
 
     <!-- <counter-button /> で 閉じタグと同じ表現 -->
-    <counter-button />
+    <!-- props で設定した値を指定する -->
+    <counter-button kind="plus" color="blue" />
+    <counter-button kind="minus" color="orange" />
   </div>
 </template>
 
