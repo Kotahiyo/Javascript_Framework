@@ -19,8 +19,8 @@
 
     <!-- <counter-button /> で 閉じタグと同じ表現 -->
     <!-- props で設定した値を指定する -->
-    <counter-button kind="plus" color="blue" />
-    <counter-button kind="minus" color="orange" />
+    <counter-button kind="plus" color="blue" @click="plus" />
+    <counter-button kind="minus" color="orange" @click="minus" />
   </div>
 </template>
 
