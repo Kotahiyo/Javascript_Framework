@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <!-- {{}} で囲むと javascript が書ける（マスタッシュ記法） -->
-    <div class="number">{{ count }}</div>
-    <!-- v-記法をディレクティブと呼ぶ
+  <div class="container">
+    <div>
+      <!-- {{}} で囲むと javascript が書ける（マスタッシュ記法） -->
+      <div class="number">{{ count }}</div>
+      <!-- v-記法をディレクティブと呼ぶ
     @ で省略できる
     @click = v-on:click  -->
-    <!-- <button @click="plus" class="button">+</button>
+      <!-- <button @click="plus" class="button">+</button>
     <button @click="minus" class="button">-</button> -->
 
-    <!-- Vuetify で簡単にボタン作成 -->
-    <!-- <v-btn class="mx-1" fab dark color="blue" @click="plus">
+      <!-- Vuetify で簡単にボタン作成 -->
+      <!-- <v-btn class="mx-1" fab dark color="blue" @click="plus">
       <v-icon dark> mdi-plus </v-icon>
     </v-btn>
 
@@ -17,10 +18,11 @@
       <v-icon dark> mdi-minus </v-icon>
     </v-btn> -->
 
-    <!-- <counter-button /> で 閉じタグと同じ表現 -->
-    <!-- props で設定した値を指定する -->
-    <counter-button kind="plus" color="blue" @click="plus" />
-    <counter-button kind="minus" color="orange" @click="minus" />
+      <!-- <counter-button /> で 閉じタグと同じ表現 -->
+      <!-- props で設定した値を指定する -->
+      <counter-button kind="plus" color="blue" @click="plus" />
+      <counter-button kind="minus" color="orange" @click="minus" />
+    </div>
   </div>
 </template>
 
@@ -54,7 +56,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" module>
 .number {
   font-size: 64px;
 }
