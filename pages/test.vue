@@ -7,14 +7,18 @@
 
     <!-- v-bind -->
     <!-- <a :href="googleLink">Googleへのリンク</a> -->
-    <!-- <img :src="imageUrl()" width="100px" /> -->
+    <img :src="imageUrl()" width="100px" />
 
     <!-- v-on -->
-    <v-btn @click="clickMessage('クリック')">クリック</v-btn>
+    <!-- <v-btn @click="clickMessage('クリック')">クリック</v-btn>
     <v-btn @mousedown="clickMessage('マウスダウン')">マウスダウン</v-btn>
     <v-btn @contextmenu="clickMessage('コンテクストメニュー')"
       >コンテクストメニュー</v-btn
-    >
+    > -->
+
+    <!-- v-model -->
+    <v-text-field v-model="score" />
+
     <!-- v-show は false の場合、非表示になる -->
     <!-- <div v-show="isShown">見えるかな？</div>
     <v-btn @click="toggleShown">ボタン押すと消える</v-btn> -->
