@@ -21,7 +21,7 @@
 
     <!-- v-for -->
     <div v-for="fruit in fruits" :key="fruit.name">
-      {{ fruit.name }}
+      <p>{{ fruit.name }} は {{ fruit.price }}円 です</p>
     </div>
     <!-- v-show は false の場合、非表示になる -->
     <!-- <div v-show="isShown">見えるかな？</div>
@@ -37,10 +37,10 @@ export default {
       score: 0,
       googleLink: 'https://www.google.com/?hl=ja',
       fruits: [
-        { name: 'orange' },
-        { name: 'apple' },
-        { name: 'glape' },
-        { name: 'younasi' },
+        { name: 'orange', price: 200 },
+        { name: 'apple', price: 400 },
+        { name: 'glape', price: 300 },
+        { name: 'younasi', price: 100 },
       ],
     }
   },
