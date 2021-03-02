@@ -19,6 +19,10 @@
     <!-- v-model -->
     <v-text-field v-model="score" />
 
+    <!-- v-for -->
+    <div v-for="fruit in fruits" :key="fruit.name">
+      {{ fruit.name }}
+    </div>
     <!-- v-show は false の場合、非表示になる -->
     <!-- <div v-show="isShown">見えるかな？</div>
     <v-btn @click="toggleShown">ボタン押すと消える</v-btn> -->
@@ -32,6 +36,12 @@ export default {
       isShown: true,
       score: 0,
       googleLink: 'https://www.google.com/?hl=ja',
+      fruits: [
+        { name: 'orange' },
+        { name: 'apple' },
+        { name: 'glape' },
+        { name: 'younasi' },
+      ],
     }
   },
   methods: {
