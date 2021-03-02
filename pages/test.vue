@@ -7,7 +7,14 @@
 
     <!-- v-bind -->
     <!-- <a :href="googleLink">Googleへのリンク</a> -->
-    <img :src="imageUrl()" width="100px" />
+    <!-- <img :src="imageUrl()" width="100px" /> -->
+
+    <!-- v-on -->
+    <v-btn @click="clickMessage('クリック')">クリック</v-btn>
+    <v-btn @mousedown="clickMessage('マウスダウン')">マウスダウン</v-btn>
+    <v-btn @contextmenu="clickMessage('コンテクストメニュー')"
+      >コンテクストメニュー</v-btn
+    >
     <!-- v-show は false の場合、非表示になる -->
     <!-- <div v-show="isShown">見えるかな？</div>
     <v-btn @click="toggleShown">ボタン押すと消える</v-btn> -->
@@ -36,6 +43,9 @@ export default {
       } else {
         return 'https://2.bp.blogspot.com/-Bc8NTQ2PqY8/U0pTOuIDWQI/AAAAAAAAfGY/1RU2LKdozKs/s800/grade5_ganbarimasyou.png'
       }
+    },
+    clickMessage(message) {
+      alert(message)
     },
   },
 }
