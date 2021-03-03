@@ -21,10 +21,17 @@ export default {
     }
   },
   async created() {
-    const response = await this.$axios.get(
-      'http://jsonplaceholder.typicode.com/users'
-    )
-    console.log(response)
+    try {
+      const response = await this.$axios.get(
+        'http://jsonplaceholder.typicode.com/userssss'
+      )
+      console.log(response)
+    } catch (err) {
+      const res = err.response
+      console.log(res)
+    }
+
+    // console.log(response)
   },
   mounted() {
     console.log('mounted')
