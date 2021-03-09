@@ -95,15 +95,17 @@ export default {
       set(visible) {
         console.log(`visible: ${visible}`)
         if (!visible) {
-          this.toggleSidebar()
+          this.closeSidebar()
         }
       },
     },
   },
   methods: {
     toggleSidebar() {
-      this.$store.state.layout.sidebarVisible = !this.$store.state.layout
-        .sidebarVisible
+      this.$store.dispatch('layout/toggleSidebar')
+    },
+    closeSidebar() {
+      this.$store.dispatch('layout/closeSidebar')
     },
   },
 }
