@@ -9,7 +9,7 @@ export const mutations = {
     state.sidebarVisible = !state.sidebarVisible
   },
   setSidebarVisible(state, visible) {
-    state.setSidebarVisible = visible
+    state.sidebarVisible = visible
   },
 }
 

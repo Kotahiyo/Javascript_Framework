@@ -23,6 +23,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <v-btn @click="toggleSidebar()"> サイドバー </v-btn>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="toggleSidebar()" />
