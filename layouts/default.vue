@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      v-model="drawer"
+      v-model="sidebarVisible"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
@@ -25,7 +25,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="toggleSidebar()" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
       </v-btn>
@@ -86,6 +86,25 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js',
     }
+  },
+  computed: {
+    sidebarVisible: {
+      get() {
+        return this.$store.state.layout.sidebarVisible
+      },
+      set(visible) {
+        console.log(`visible: ${visible}`)
+        if (!visible) {
+          this.toggleSidebar()
+        }
+      },
+    },
+  },
+  methods: {
+    toggleSidebar() {
+      this.$store.state.layout.sidebarVisible = !this.$store.state.layout
+        .sidebarVisible
+    },
   },
 }
 </script>
